@@ -1,0 +1,20 @@
+API Tested:
+https://jsonplaceholder.typicode.com/users
+
+Method:
+GET
+
+Tool Used:
+Postman
+
+Response Status:
+200 OK
+
+Observations:
+- Endpoint accessible without authentication
+- User information exposed
+- No visible rate limiting
+- No authentication controls observed
+
+Conclusion:
+Multiple API security risks identified during analysis.
