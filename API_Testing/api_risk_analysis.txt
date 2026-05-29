@@ -1,0 +1,51 @@
+Risk 1: Open / Unauthenticated Endpoint
+
+Severity: Medium
+
+Observation:
+The endpoint https://jsonplaceholder.typicode.com/users can be accessed without authentication.
+
+Business Impact:
+Unauthorized users may access API data without verification.
+
+Recommendation:
+Implement authentication mechanisms such as API Keys, OAuth 2.0, or JWT tokens to restrict access.
+
+Risk 2: Excessive Data Exposure
+
+Severity: Medium
+
+Observation:
+The API response exposes multiple user-related fields including email addresses, phone numbers, addresses, websites, and company details.
+
+Business Impact:
+Exposing unnecessary information may increase privacy risks and provide attackers with data useful for phishing, social engineering, or reconnaissance activities.
+
+Recommendation:
+Return only the minimum required data fields and apply the principle of least privilege to API responses.
+
+Risk 3: Potential Missing Rate Limiting
+
+Severity: Low
+
+Observation:
+No visible rate-limiting controls were observed during basic API testing.
+
+Business Impact:
+Without rate limiting, APIs may be vulnerable to automated abuse, excessive requests, data scraping, and resource exhaustion.
+
+Recommendation:
+Implement API rate limiting and monitoring to detect and prevent excessive requests from a single source.
+
+Risk 4: Missing Authentication Controls
+
+Severity: Medium
+
+Observation:
+The API endpoint provides access to user-related information without requiring authentication or authorization mechanisms.
+
+Business Impact:
+Unauthorized users may access information that should normally be restricted to authenticated users. In real-world applications, this could lead to data exposure and privacy concerns.
+
+Recommendation:
+Implement secure authentication mechanisms such as API Keys, OAuth 2.0, or JWT-based authentication before granting access to sensitive resources.
